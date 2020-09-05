@@ -28,7 +28,6 @@ def consolidate_cart(cart)
       consolidated_cart.each do |consolidated_item|
         consolidated_item[:count] = 1 if consolidated_item[:item] == item[:item]
       end
-    elsif 
     end
   end
   consolidated_cart
