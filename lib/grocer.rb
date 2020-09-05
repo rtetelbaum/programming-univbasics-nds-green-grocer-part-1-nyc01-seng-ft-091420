@@ -30,9 +30,7 @@ def consolidate_cart(cart)
       end
     else
       consolidated_cart.each do |consolidated_item|
-        if consolidated_item[:item] == item[:item]
-          consolidated_item[:count] += 1
-        end
+        consolidated_item[:count] += 1 if consolidated_item[:item] == item[:item]
       end
     end
   end
