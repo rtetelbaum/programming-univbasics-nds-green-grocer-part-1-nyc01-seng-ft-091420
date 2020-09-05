@@ -29,7 +29,10 @@ def consolidate_cart(cart)
         consolidated_item[:count] = 1 if consolidated_item[:item] == item[:item]
       end
     else
-      
+      consolidated_cart.each do |consolidated_item|
+        if consolidated_item[:item] == item[:item]
+          
+      end
     end
   end
   consolidated_cart
