@@ -22,9 +22,13 @@ end
 
 def consolidate_cart(cart)
   consolidated_cart = []
-  cart.each do |hashes|
-    
+  cart.each do |item|
+    if !find_item_by_name_in_collection(item, cart)
+      consolidated_cart << item + count: 1
+      binding.pry
+    end
   end
+  consolidated_cart
 end
 
 
