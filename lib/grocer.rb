@@ -23,6 +23,7 @@ end
 def consolidate_cart(cart)
   consolidated_cart = []
   cart.each do |item|
+    binding.pry
     if !find_item_by_name_in_collection(item, consolidated_cart)
       consolidated_cart << item
       consolidated_cart.each do |consolidated_item|
