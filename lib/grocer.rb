@@ -28,9 +28,9 @@ def consolidate_cart(cart)
       consolidated_cart.each do |consolidated_item|
         consolidated_item[:count] = 1 if consolidated_item[:item] == item[:item]
       end
-    else#if find_item_by_name_in_collection(item[:item], consolidated_cart)
-      consolidated_cart.each do |consolidated_item|
-        consolidated_item[:count] + 1 if consolidated_item[:item] == item[:item]
+    elsif find_item_by_name_in_collection(item[:item], consolidated_cart)
+      # consolidated_cart.each do |consolidated_item|
+      #   consolidated_item[:count] + 1 if consolidated_item[:item] == item[:item]
       end
     end
   end
